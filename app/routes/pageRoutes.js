@@ -3,6 +3,7 @@ var _         = require("underscore");
 var async     = require('async');
 var uuid      = require('node-uuid');
 var extend    = require("node.extend");
+var express   = require("express");
 
 //var fs        = require("fs");
 //var markdown  = require("markdown").markdown;
@@ -24,6 +25,8 @@ module.exports = function(app){
         render.apilang   = "eng";
         render.language  = "english";
         render.direction = "ltr";
+        render.NODE_ENV   = process.env.NODE_ENV;
+        render.production = !!(render.NODE_ENV === "production");
 
         render.layout = "template";
         render.urls = require("../views/text/urls.js")(request, render);

@@ -1,5 +1,12 @@
-<link rel="stylesheet" href="/bower/reset-css/reset.css"/>
-<link rel="stylesheet" href="/bower/bootstrap-css/css/bootstrap.css"/>
-<link rel="stylesheet" href="/bower/bootstrap-css/css/bootstrap-theme.css"/>
+{{#production}}
+<link rel="stylesheet" href="/production/css/includes.css" />
+{{/production}}
+{{^production}}
+<link rel="stylesheet" href="/scss/vendor.css" />
+<link rel="stylesheet" href="/scss/includes.css" />
 <link rel="stylesheet" href="/img/sprite/sprite.css" />
-<link rel="stylesheet" href="/scss/infographic.css" />
+{{/production}}
+
+
+
+

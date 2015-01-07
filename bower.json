@@ -18,9 +18,12 @@
   "dependencies": {
     "angular":             "*",
     "angular-i18n":        "*",
-    "angular-route":       "*",
     "angular-resource":    "*",
+    "angular-route":       "*",
+    "angulartics":         "*",
+    "array-generics":      "plusdude/array-generics",
     "bootstrap-css":       "*",
+    "bootstrap-scss":      "twbs/bootstrap-sass",
     "css3pie":             "*",
     "d3":                  "*",
     "datejs":              "*",

@@ -9,7 +9,12 @@ angular.module('infographicApp', [
     'infographicApp.resources',
     'infographicApp.routes',
     'infographicApp.services'
-]);
+])
+    .config(function( $analyticsProvider ) {
+        $analyticsProvider.firstPageview(true); /* Records pages that don't use $state or $route */
+        $analyticsProvider.withAutoBase(true);  /* Records full path */
+    });
+
 
 // Declare app level module which depends on filters, and services
 angular.module('infographicApp.config', [])

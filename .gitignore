@@ -5,6 +5,14 @@ app/public/scss
 production
 vendor/browserify.js
 
+# SSL Keys #
+############
+*.san.crt
+*.san.csr
+*.san.key
+*.san.key.password
+
+
 # Development Files #
 #####################
 node_modules

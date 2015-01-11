@@ -3,33 +3,34 @@ var path   = require('path');
 var extend = require("node.extend");
 
 var config = {
-    name: 'Infographic Generator',
-    access_log: '/var/log/node/infographic-access.log',
-    error_log:  '/var/log/node/infographic-error.log',
-    debug_log:  '/var/log/node/infographic-debug.log',
+    name: 'Node Archetype',
+    access_log: '/var/log/node/node-archetype-access.log',
+    error_log:  '/var/log/node/node-archetype-error.log',
+    debug_log:  '/var/log/node/node-archetype-debug.log',
 
-    db:      'mongodb://localhost/infographicdb',
+    db:      'mongodb://localhost/node-archetype',
+
     crudPermissions: {
-        edit: ["infographics"],
-        view: ["infographics"]
+        edit: ["node-archetype"],
+        view: ["node-archetype"]
     },
 
     web: {
-        host: "https://localhost:4001",
+        host: "https://localhost:4000",
         port: {
-            http:  80,
-            https: 443
+            http:  4000,
+            https: 4001
         }
     },
 
     sslcert: {
-        key:  fs.readFileSync(path.join(__dirname, '../sslcert/san/infographic.san.key'), 'utf8'),
-        cert: fs.readFileSync(path.join(__dirname, '../sslcert/san/infographic.san.crt'), 'utf8')
+        key:  fs.readFileSync(path.join(__dirname, '../../../sslcert/san/node-archetype.san.key'), 'utf8'),
+        cert: fs.readFileSync(path.join(__dirname, '../../../sslcert/san/node-archetype.san.crt'), 'utf8')
     },
     basicAuth: {
-        realm: "Infographic Generator",
-        user:  "info",
-        pass:  "graphic"
+        realm: "Node Archetype",
+        user:  "Liat",
+        pass:  "password"
     },
     cookieSecret:  "Sometimes me think what is love, and then me think love is what last cookie is for. Me give up the last cookie for you!",
     sessionSecret: "Don't try to write too much in a single session. One thousand words a day is quite enough. Stop after about four or five hours?",
@@ -59,7 +60,7 @@ var config = {
 
 module.exports = {
     test: extend(true, {}, config, {
-        db: 'mongodb://localhost/infographicdb-test',
+        db: 'mongodb://localhost/node-archetype-test',
         web: {
             host: "http://localhost:4400",
             port: {
@@ -78,9 +79,9 @@ module.exports = {
         }
     }),
     staging: extend(true, {}, config, {
-        db: 'mongodb://infographic.staging.infographic.jamesmcguigan.com/infographicdb',
+        db: 'mongodb://staging.node-archetype.jamesmcguigan.com/node-archetype',
         web: {
-            host: "http://staging.infographic.jamesmcguigan.com",
+            host: "http://staging.node-archetype.jamesmcguigan.com",
             port: {
                 http:  4000,
                 https: 4001
@@ -88,9 +89,9 @@ module.exports = {
         }
     }),
     production:  extend(true, {}, config, {
-        db: 'mongodb://infographic.jamesmcguigan.com/infographicdb',
+        db: 'mongodb://node-archetype/node-archetype',
         web: {
-            host: "http://infographic.jamesmcguigan.com",
+            host: "http://node-archetype.jamesmcguigan.com",
             port: {
                 http:  4000,
                 https: 4001

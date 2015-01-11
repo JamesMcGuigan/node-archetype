@@ -3,7 +3,7 @@ process.argv.forEach(function (value, index, array) {
 });
 process.env.NODE_ENV = process.env.NODE_ENV || "development";
 
-var config   = require('./app/config/config.js')[process.env.NODE_ENV];
+var config   = require('./app/server/config/config.js')[process.env.NODE_ENV];
 var cluster = require('cluster');
 var http    = require('http');
 var numCPUs = Math.max( 2, require('os').cpus().length );

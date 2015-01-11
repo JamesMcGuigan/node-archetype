@@ -4,12 +4,12 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.org/JamesMcGuigan/statistical-learning.git"
+    "url": "https://github.com/JamesMcGuigan/node-archetype.git"
   },
   "licenses": [
     {
       "type": "GPL3",
-      "url": "https://bitbucket.org/JamesMcGuigan/statistical-learning/blob/master/LICENSE"
+      "url": "https://bitbucket.org/JamesMcGuigan/node-archetype/blob/master/LICENSE"
     }
   ],
   "scripts": {
@@ -18,8 +18,8 @@
 
     "start":              "compass compile & compass watch & npm run nodemon",
     "test":               "mocha   test/InfographicGeneratorTest.js;",
-    "nodemon":            "/usr/local/bin/nodemon App.js",
-    "nodemon_quiet":      "/usr/local/bin/nodemon App.js |  grep -v 'nodemon.*:.*\\(___jb_...___\\|.idea/\\|.git/\\)' | uniq",
+    "nodemon":            "/usr/local/bin/nodemon Server.js",
+    "nodemon_quiet":      "/usr/local/bin/nodemon Server.js |  grep -v 'nodemon.*:.*\\(___jb_...___\\|.idea/\\|.git/\\)' | uniq",
     "mongo":              "mongod",
     "killall":            "killall node ruby",
 
@@ -57,6 +57,7 @@
     "hogan.js": "*",
     "http-auth": "*",
     "method-override": "*",
+    "github-flavored-markdown": "*",
     "mmm": "*",
     "mongojs": "*",
     "morgan": "*",

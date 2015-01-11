@@ -3,7 +3,7 @@ process.argv.forEach(function (value, index, array) {
 });
 process.env.NODE_ENV = process.env.NODE_ENV || "development";
 
-var config         = require('./app/config/config.js')[process.env.NODE_ENV];
+var config         = require('./app/server/config/config.js')[process.env.NODE_ENV];
 var _              = require("underscore");
 var express        = require('express');
 var bodyParser     = require('body-parser');
@@ -62,7 +62,7 @@ app.use(flash());
 
 
 // HTML Rendering Settings
-app.set('views', __dirname + '/app/views');
+app.set('views', __dirname + '/app/server/views');
 mmm.setEngine('hogan.js');
 app.set('view engine', 'mmm');
 
@@ -73,9 +73,9 @@ app.use('/bower',  express.static(__dirname + '/bower'));
 app.use('/vendor', express.static(__dirname + '/vendor'));
 app.use(connectDomain()); // allow express to output propper stack traces
 
-require('./app/routes/ajaxRoutes.js')(app);
-require('./app/routes/pageRoutes.js')(app);
-require('./app/routes/CrudAPIRoutes.js')(app);
+require('./app/server/routes/ajaxRoutes.js')(app);
+require('./app/server/routes/pageRoutes.js')(app);
+require('./app/server/routes/CrudAPIRoutes.js')(app);
 //require('./app/routes/errorRoutes.js')(app);
 
 

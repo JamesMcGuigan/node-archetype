@@ -27,14 +27,12 @@ https://github.com/JamesMcGuigan/puppet-config
 Project Layout
 ==============
 
-- [/data/](https://github.com/JamesMcGuigan/node-archetype/tree/master/data) - Example configuration files
-- [/data/sources/](https://github.com/JamesMcGuigan/node-archetype/tree/master/data/sources/) - Example data sources
-- [/app/config/config.js](https://github.com/JamesMcGuigan/node-archetype/tree/master/app/config/config.js) - Node configuration file
-- [/app/controllers/](https://github.com/JamesMcGuigan/node-archetype/tree/master/app/controllers/) - Node API logic
-- [/app/routes/](https://github.com/JamesMcGuigan/node-archetype/tree/master/app/routes/) - Node URL routing
-- [/app/views/](https://github.com/JamesMcGuigan/node-archetype/tree/master/app/views/) - Mustache templates for generating initial HTML page
+- [/app/server/config/config.js](https://github.com/JamesMcGuigan/node-archetype/tree/master/app/server/config/config.js) - Node configuration file
+- [/app/server/controllers/](https://github.com/JamesMcGuigan/node-archetype/tree/master/app/server/controllers/) - Node API logic
+- [/app/server/routes/](https://github.com/JamesMcGuigan/node-archetype/tree/master/app/server/routes/) - Node URL routing
+- [/app/server/views/](https://github.com/JamesMcGuigan/node-archetype/tree/master/app/server/views/) - Mustache templates for generating initial HTML page
 - [/app/public/scss-src/](https://github.com/JamesMcGuigan/node-archetype/tree/master/app/public/scss-src/) - SASS source files
 - [/app/public/scss/](https://github.com/JamesMcGuigan/node-archetype/tree/master/app/public/scss/) - Compiled SASS -> CSS
 - [/app/public/html/](https://github.com/JamesMcGuigan/node-archetype/tree/master/app/public/html/) - Angualar HTML Snippits
 - [/app/public/angular/](https://github.com/JamesMcGuigan/node-archetype/tree/master/app/public/angular/) - Angualar.js Application
-- [/app/public/angular/directive/directive.infographic.js](https://github.com/JamesMcGuigan/node-archetype/tree/master/app/public/angular/directive/directive.infographic.js) - The main logic for the SVG generator
+
